@@ -30,8 +30,8 @@ return displayMessage(message)
 
 /* Write your implementation of displayMessage() */
 function displayMessage() {
-  const input = document.getElementById('time');
-  time.addEventListener('click',function(event){
+  const input = document.getElementById('greeting');
+  time.displayMessage('click',function(event){
     alert(message)
   });
 }
