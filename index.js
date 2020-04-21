@@ -11,27 +11,40 @@ function handleClick(e) {
 
 
 /* Write your implementation of greet() */
-function greet(string){
-// split time and capture first two numbers
-var hour = string.split(":")
-// if before 12 good morning
-  if (hour[0] < 12) {
-  message = "Good Morning"
-  // else if 17 or later good evening
-  } else if (hour[0]  >= 17) {
-  message = "Good Evening"
-  // else good afternoon
-  } else { 
-  message = "Good Afternoon"
-  }
-// return display message
-return displayMessage(message)
+// function greet(time){
+// // split time and capture first two numbers
+// // var hour = time.split(":")
+// var hour = parseInt(time)
+// // if before 12 good morning
+//   if (hour < 12) {
+//   message = "Good Morning"
+//   // else if 17 or later good evening
+//   } else if (hour  >= 17) {
+//   message = "Good Evening"
+//   // else good afternoon
+//   } else { 
+//   message = "Good Afternoon"
+//   }
+// // return display message
+// return displayMessage(message)
+// }
+
+// /* Write your implementation of displayMessage() */
+// function displayMessage() {
+//   const input = document.getElementById('time');
+//   time.displayMessage('click',function(event){
+//     alert(message)
+//   });
+// }
+
+function displayMessage(msg) {
+  document.getElementById("greeting").innerText = msg;
 }
 
-/* Write your implementation of displayMessage() */
-function displayMessage() {
-  const input = document.getElementById('greeting');
-  time.displayMessage('click',function(event){
-    alert(message)
-  });
+function greet(timeStr) {
+  const hour = parseInt(timeStr, 10);
+  if ( hour < 12) return "Good Morning"
+  if ( hour > 17) return "Good Evening"
+  return "Good Afternoon"
 }
+
