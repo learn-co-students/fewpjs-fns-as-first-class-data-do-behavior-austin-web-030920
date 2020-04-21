@@ -13,7 +13,7 @@ function handleClick(e) {
     const timeNumVal = parseInt(time.split(':', 1)) 
     if (timeNumVal < 12){
     return 'Good Morning'
-    } else if (timeNumVal > 12 && timeNumVal < 17) {
+    } else if (timeNumVal >= 12 && timeNumVal < 17) {
       return 'Good Afternoon'
     } else {
       return 'Good Evening'
